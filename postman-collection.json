@@ -63,9 +63,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/query",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "query"]
+              "raw": "{{baseUrl}}/query",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "query"
+              ]
             }
           },
           "response": []
@@ -113,9 +118,16 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/session/{{sessionId}}/history",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "session", "{{sessionId}}", "history"]
+              "raw": "{{baseUrl}}/session/{{sessionId}}/history",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "session",
+                "{{sessionId}}",
+                "history"
+              ]
             }
           },
           "response": []
@@ -146,9 +158,16 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/patient/{{patientId}}/ai-history",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "patient", "{{patientId}}", "ai-history"]
+              "raw": "{{baseUrl}}/patient/{{patientId}}/ai-history",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "patient",
+                "{{patientId}}",
+                "ai-history"
+              ]
             }
           },
           "response": []
@@ -180,9 +199,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/analytics?startDate=2026-01-01&endDate=2026-12-31",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "analytics"],
+              "raw": "{{baseUrl}}/analytics?startDate=2026-01-01&endDate=2026-12-31",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "analytics"
+              ],
               "query": [
                 {
                   "key": "startDate",
@@ -245,9 +269,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/patients",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "patients"]
+              "raw": "{{baseUrl}}/patients",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "patients"
+              ]
             }
           },
           "response": []
@@ -280,9 +309,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/patients/{{patientId}}",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "patients", "{{patientId}}"]
+              "raw": "{{baseUrl}}/patients/{{patientId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "patients",
+                "{{patientId}}"
+              ]
             }
           },
           "response": []
@@ -311,9 +346,15 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/patients/search?q=Silva",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "patients", "search"],
+              "raw": "{{baseUrl}}/patients/search?q=Silva",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "patients",
+                "search"
+              ],
               "query": [
                 {
                   "key": "q",
@@ -351,9 +392,16 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/patients/{{patientId}}/medical-history",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "patients", "{{patientId}}", "medical-history"]
+              "raw": "{{baseUrl}}/patients/{{patientId}}/medical-history",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "patients",
+                "{{patientId}}",
+                "medical-history"
+              ]
             }
           },
           "response": []
@@ -414,9 +462,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/query",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "query"]
+              "raw": "{{baseUrl}}/query",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "query"
+              ]
             }
           },
           "response": []
@@ -460,9 +513,14 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/api/query",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "query"]
+              "raw": "{{baseUrl}}/query",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "query"
+              ]
             }
           },
           "response": []
@@ -491,9 +549,16 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/api/session/session-inexistente/history",
-              "host": ["{{baseUrl}}"],
-              "path": ["api", "session", "session-inexistente", "history"]
+              "raw": "{{baseUrl}}/session/session-inexistente/history",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "session",
+                "session-inexistente",
+                "history"
+              ]
             }
           },
           "response": []
