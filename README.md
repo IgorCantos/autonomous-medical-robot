@@ -2,6 +2,9 @@
 
 Sistema de apoio clínico desenvolvido em **Python** para auxiliar profissionais de saúde na análise de prontuários e tomada de decisões baseadas em evidências.
 
+## Link Youtube
+[![Assista ao video aqui]](https://youtu.be/WMO168zJYR0)
+
 ## 🎯 Objetivo
 
 Este projeto foi criado para fornecer suporte inteligente a médicos e profissionais de saúde, permitindo consultas rápidas e precisas sobre histórico de pacientes através de uma interface simples e segura.
@@ -282,8 +285,25 @@ sequenceDiagram
 
 ## 📊 Funcionalidades
 
-### RAG
-Sistema de busca direta no banco de dados por paciente ID, sem necessidade de embeddings complexos. Mais rápido e eficiente para consultas específicas.
+### RAG (Retrieval-Augmented Generation)
+
+Sistema de busca direta no banco de dados por patient ID, sem necessidade de embeddings complexos. Mais rápido e eficiente para consultas específicas.
+
+#### Como funciona o RAG:
+
+1. **Recebimento da Consulta**: O usuário envia uma pergunta médica junto com o ID do paciente
+2. **Busca no Banco de Dados**: O sistema consulta o SQLite buscando registros médicos do paciente específico
+3. **Construção do Contexto**: Os registros encontrados (sintomas, prescrições, observações) são formatados em um contexto estruturado
+4. **Enriquecimento do Prompt**: O contexto médico é inserido no prompt junto com a pergunta do usuário
+5. **Geração da Resposta**: O modelo OpenAI recebe o prompt completo (system_prompt + contexto + pergunta) e gera uma resposta fundamentada nos dados reais do paciente
+6. **Validação e Retorno**: A resposta é validada e retornada ao usuário com metadados sobre as fontes utilizadas
+
+#### Vantagens desta abordagem:
+- **Não requer embeddings**: Consulta direta por patientId, sem cálculos vetoriais complexos
+- **Latência baixa**: Respostas em milissegundos, sem overhead de busca semântica
+- **Precisão garantida**: Dados exatos do paciente, sem alucinações do modelo
+- **Custo zero**: Sem necessidade de serviços de embedding pagos (OpenAI, Pinecone, etc.)
+- **Privacidade**: Todos os dados permanecem no banco local SQLite
 
 ### Sistema de Logs
 Todas as interações são registradas com:
@@ -313,7 +333,7 @@ O sistema utiliza Python logging para logs estruturados:
 
 ## 🛡️ Prompt Engineering - Segurança e Prevenção de Abusos
 
-O sistema utiliza técnicas avançadas de **Prompt Engineering** no `system_prompt` para garantir respostas seguras e evitar tentativas de manipulação (jailbreak). As estratégias implementadas incluem:
+O sistema utiliza técnicas avançadas de **Prompt Engineering** para garantir respostas seguras e evitar tentativas de manipulação (jailbreak). As estratégias implementadas incluem:
 
 ### 1. Definição Clara de Papel
 - **Assistente médico AI** com propósito específico de suporte a profissionais de saúde
@@ -398,7 +418,9 @@ O sistema de Assistente Médico Inteligente apresenta os seguintes pontos fortes
 ### 6. Tecnologias Apropriadas
 - **Python + Flask**: Stack madura, bem documentada e amplamente usada em healthcare
 - **SQLite3**: Banco leve, serverless, ideal para deploys em ambientes restritos
-- **OpenAI API**: Modelos de última geração com fine-tuning para domínio médico
+- **OpenAI API**: Modelos de última geração (GPT-4o, GPT-OSS) com capacidades avançadas de raciocínio
+
+> **Nota sobre Fine-Tuning vs Prompt Engineering**: Este sistema utiliza **Prompt Engineering** em vez de Fine-Tuning. Os modelos atuais possuem bilhões de parâmetros, e realizar fine-tuning em hardware comum seria inviável devido às limitações de GPU/VRAM. O prompt engineering bem elaborado, combinado com o sistema RAG, oferece resultados comparáveis sem necessidade de infraestrutura especializada.
 
 ### 7. Foco em Segurança do Paciente
 - **Não Prescritivo**: Sistema explicitamente proíbe diagnósticos e prescrições
