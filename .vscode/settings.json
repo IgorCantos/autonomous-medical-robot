@@ -1,0 +1,25 @@
+{
+  "debug.node.autoAttach": "on",
+  "debug.terminal.clearBeforeReusing": true,
+  "debug.node.terminalOptions": {
+    "cwd": "${workspaceFolder}"
+  },
+  "debug.javascript.autoAttachFilter": "smart",
+  "debug.node.debugAutoAttach": "on",
+  "debug.node.debugAutoAttachPattern": "**/src/**/*.js",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.git": true
+  }
+}

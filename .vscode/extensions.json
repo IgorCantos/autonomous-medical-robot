@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-vscode.vscode-json",
+    "ms-vscode.node-debug2",
+    "ms-vscode.js-debug",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-node-azure-pack"
+  ],
+  "unwantedRecommendations": []
+}
